@@ -34,11 +34,10 @@ export default function Page() {
   }, []);
 
   return (
-    <main>
+    <main className="ml-3">
       <div>
         <p className="text-2xl">Original Size: 87.35 kb</p>
-        <p className="text-2xl mt-4">Image from Edge</p>
-        <p className="text-2xl">JSS Optimized Size: {jssOptimizedSizeInKb.toFixed(2)} kb</p>
+        <p className="text-2xl mt-3">JSS Optimized Size: {jssOptimizedSizeInKb.toFixed(2)} kb</p>
       </div>
       <NextImage
         id="jss-image-edge"
@@ -50,7 +49,6 @@ export default function Page() {
       />
       <p className="text-2xl mt-4">Next Optimized Size: {nextOptimizedSizeInKb.toFixed(2)} kb</p>
       <Image id="next-image-edge" src={imageFromEdge.value.src} alt="man" height={392} width={707} />
-
     </main>
   )
 }
